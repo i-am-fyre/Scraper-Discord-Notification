@@ -1,0 +1,34 @@
+# Replace the values in the fields below with your own info so the scraper can send out a Discord message.
+
+# "webhook" is the webhook associated with a Discord bot for a particular channel.
+# "bot name" is the name of the bot that you wish to post the ads under (this does NOT need to match the name on the webhook, it will override it).
+
+webhook: << INSERT WEBHOOK HERE >>
+bot name: Kijiji
+
+---
+
+# Set the URLs you wish to scrape below with an optional list of words to exclude per URL.
+# Any filters you apply on the Kijij website are a part of the URL and will apply to the scraper.
+# "url" is as you would guess the URL you want to scrape.
+# "exclude" is a list of words, if an ad title contains any one of the words it will be ignored. Add as many words as you desire.
+
+# There are a couple examples below which you will want to remove/replace with your own.
+# You can add as many URLs as you wish to scrape.
+
+# Just a URL to scrape
+- url: https://www.kijiji.ca/b-manitoba/dell-poweredge/k0l9006
+  exclude:
+    - 2[8-9][0-9]0
+    - e3-
+    - e5-
+- url: https://www.kijiji.ca/b-manitoba/xeon/k0l9006
+- url: https://www.kijiji.ca/b-manitoba/server-rack/k0l9006
+- url: https://www.kijiji.ca/b-manitoba/server-cabinet/k0l9006
+- url: https://www.kijiji.ca/b-manitoba/lto/k0l9006
+  exclude:
+    - LTO1
+    - LTO2
+    - LTO3
+    - LTO4
+- url: https://www.kijiji.ca/b-manitoba/apc-ups/k0l9006
