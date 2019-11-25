@@ -5,7 +5,7 @@ All notifications will be sent to your desired Discord channel via webhook.
 <h2>Setup</h2>
 Copy all files to your computer/server. Give appropriate permissions to the files so that they can be executed.
 
-** How to setup as a re-occurring check **
+**How to setup as a re-occurring check**
 >$ sudo crontab -e
 ```bash
 */7 * * * * python3 /home/scraper/Kijiji-Scraper-Discord/main.py  #replace with the proper location of your main.py file
