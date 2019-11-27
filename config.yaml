@@ -19,9 +19,8 @@ bot name: Kijiji
 # Just a URL to scrape
 - url: https://www.kijiji.ca/b-manitoba/dell-poweredge/k0l9006
   exclude:
-    - 2[8-9][0-9]0
-    - e3-
-    - e5-
+    - e3
+    - e5
 - url: https://www.kijiji.ca/b-manitoba/xeon/k0l9006
 - url: https://www.kijiji.ca/b-manitoba/server-rack/k0l9006
 - url: https://www.kijiji.ca/b-manitoba/server-cabinet/k0l9006
