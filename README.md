@@ -25,6 +25,11 @@ Open config.yaml to change some settings.
 >$ sudo nano /github/Scraper-Discord-Notification/config.yaml
 
 
+<h3>Get a Discord Webhook</h3>
+
+Check out: https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-Webhooks
+
+
 <h3>config.yaml</h3>
 
 **webhook:** insert the url provided by Discord. No quotations.
@@ -72,9 +77,10 @@ This sets it up to scrape every 15 minutes for example.
 
 <h2>To-Do</h2>
 
-- [ ] How to get webhook
+- [x] How to get webhook
 - [ ] Screenshots of notifications
 - [x] Which files require editing (config.yaml)
 - [x] How to setup searches/exclusions
 - [x] Determine appropriate permissions for each file so that each file has the minimum appropriate permissions.
 - [x] Remove dependance on hard-coded file locations so that it can be used by anyone in any desired directory.
+- [ ] Investigate exclusions -- can we support RegEx? e.g. 2[0-9][8-9]0 to match with 2490, 2590, etc.
