@@ -2,6 +2,7 @@
 
 import yaml
 import sys
+import os
 
 from kijiji_scraper.kijiji_scraper import KijijiScraper
 from kijiji_scraper.discord_client import DiscordClient
@@ -9,9 +10,10 @@ from kijiji_scraper.discord_client import DiscordClient
 if __name__ == "__main__":
     args = sys.argv
     skip_flag = "-s" in args
+    current_directory = os.path.dirname(os.path.realpath(__file__))
 
     # Get config values
-    with open("/home/scraper/Kijiji-Scraper-Discord/config.yaml", "r") as config_file:  ## This is specific to my machine, will "./config.yaml" work?
+    with open(current_directory + "/config.yaml", "r") as config_file:
         discord_config, urls_to_scrape = yaml.safe_load_all(config_file)
 
     # Initialize the KijijiScraper

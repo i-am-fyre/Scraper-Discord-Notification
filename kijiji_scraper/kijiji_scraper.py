@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 
+import  os
 import requests
 from bs4 import BeautifulSoup
 import json
@@ -8,8 +9,9 @@ from pathlib import Path
 
 
 class KijijiScraper():
+    current_directory = os.path.dirname(os.path.realpath(__file__))
 
-    def __init__(self, filename="/home/scraper/Kijiji-Scraper-Discord/ads.json"):  ## This is specific to my machine, will "../ads.json" work?
+    def __init__(self, filename=current_directory + "/../ads.json"):
         self.filepath = Path().absolute().joinpath(filename)
         self.all_ads = {}
         self.new_ads = {}
