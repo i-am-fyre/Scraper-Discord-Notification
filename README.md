@@ -8,6 +8,7 @@ Copy all files to your computer/server. Give appropriate permissions to the file
 
 
 <h3>How to setup as a re-occurring check</h3>
+
 >$ sudo crontab -e
 ```bash
 */7 * * * * python3 /home/scraper/Kijiji-Scraper-Discord/main.py  #replace with the proper location of your main.py file
