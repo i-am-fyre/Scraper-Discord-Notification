@@ -2,6 +2,7 @@
 
 A web scraper for Kijiji.ca based on your desired searches. You can also use excludes to prevent any unrelated items from triggering the notification script.
 All notifications will be sent to your desired Discord channel via webhook.
+*Tested on Ubuntu 18.04.03 LTS.*
 
 
 <h2>Installation</h2>
