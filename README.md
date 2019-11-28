@@ -12,7 +12,7 @@ Make sure that your machine is up to date.
 >$ sudo apt upgrade
 
 Use git to pull the repository files to your machine in the /github/ directory:
->$ sudo git clone https://github.com/Fyre-Homelab/Scraper-Discord-Notification.git /github/
+>$ sudo git clone https://github.com/Fyre-Homelab/Scraper-Discord-Notification.git /github/Scraper-Discord-Notification
 
 Install some required packages:
 >$ sudo apt install python3-pip python3-bs4
