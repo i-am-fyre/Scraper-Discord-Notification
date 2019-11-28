@@ -88,14 +88,3 @@ Then after you've set up a re-occurring check via crontab below, it will only se
 This sets it up to scrape every 15 minutes for example.
 
 *NOTE: do not use 'sudo crontab -e' as it will not run properly!*
-
-
-<h2>To-Do</h2>
-
-- [x] How to get webhook
-- [x] Screenshots of notifications
-- [x] Which files require editing (config.yaml)
-- [x] How to setup searches/exclusions
-- [x] Determine appropriate permissions for each file so that each file has the minimum appropriate permissions.
-- [x] Remove dependance on hard-coded file locations so that it can be used by anyone in any desired directory.
-- [ ] Investigate exclusions -- can we support RegEx? e.g. 2[0-9][8-9]0 to match with 2490, 2590, etc.
