@@ -4,11 +4,14 @@ A web scraper for Kijiji.ca based on your desired searches. You can also use exc
 All notifications will be sent to your desired Discord channel via webhook.
 *Tested on Ubuntu 18.04.03 LTS.*
 
+![Scraper Discord Notification](https://user-images.githubusercontent.com/58180427/69773360-47f11e80-1158-11ea-8508-31e32dc39d27.png)
+
 
 <h2>Installation</h2>
 
 Make sure that your machine is up to date.
 >$ sudo apt update
+
 >$ sudo apt upgrade
 
 Use git to pull the repository files to your machine in the /github/ directory:
@@ -48,7 +51,11 @@ Check out: https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-W
 ```
 To get a search URL, go to http://www.kijiji.ca and use the search box for the item you're looking for.
 
+![Kijiji - Search](https://user-images.githubusercontent.com/58180427/69773229-dd3fe300-1157-11ea-884c-5f5c12b3f874.png)
+
 Use any of the filters on the left hand side of the page to narrow down your search as closely as you want (e.g. regions, price, etc.).
+
+![Kijiji - URL](https://user-images.githubusercontent.com/58180427/69773238-e16c0080-1157-11ea-8105-797037bb5687.png)
 
 **terms to exclude from scraping:** include a list of terms that you want to exclude from being posted to Discord. Follows YAML spacing.
 ```YAML
@@ -86,7 +93,7 @@ This sets it up to scrape every 15 minutes for example.
 <h2>To-Do</h2>
 
 - [x] How to get webhook
-- [ ] Screenshots of notifications
+- [x] Screenshots of notifications
 - [x] Which files require editing (config.yaml)
 - [x] How to setup searches/exclusions
 - [x] Determine appropriate permissions for each file so that each file has the minimum appropriate permissions.
