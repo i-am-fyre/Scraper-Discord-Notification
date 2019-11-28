@@ -21,13 +21,16 @@ Install some required packages:
 >$ sudo apt install python3-pip python3-bs4
 
 Install some required packages for python:
->$ sudo pip3 install -r /github/Scraper-Discord-Notification/requirements.txt
+>$ sudo -H pip3 install -r /github/Scraper-Discord-Notification/requirements.txt
 
 
 <h2>Setup</h2>
 
 Give main.py executable permissions.
 >$ sudo chmod +x /github/Scraper-Discord-Notification/main.py
+
+Give ads.json write permissions so that old ads can be stored.
+>$ sudo chmod a+w /github/Scraper-Discord-Notification/ads.json
 
 Open config.yaml to change some settings.
 >$ sudo nano /github/Scraper-Discord-Notification/config.yaml
@@ -71,11 +74,11 @@ Use any of the filters on the left hand side of the page to narrow down your sea
 <h3>Initial Start-Up (Optional)</h3>
 
 If it is your first time running the script, it may find ten to a few hundred search results, most of them will be older than you care to be bothered with.
-So we can run the script manually once in "silent mode" by using the following command:
+So we can run the script manually once in "silent mode" by appending `-s` in the same manner as the following command:
 
-> sudo python3 /github/Scraper-Discord-Notification/main.py [-s]
+> sudo python3 /github/Scraper-Discord-Notification/main.py -s
 
-This will populate a 'ads.json' file in the /github/Scraper-Discord-Notification/ file with all search results without sending you Discord notifications.
+This will populate a 'ads.json' file in the /github/Scraper-Discord-Notification/ directory with all search results without sending you Discord notifications.
 Then after you've set up a re-occurring check via crontab below, it will only search for new entries.
 
 
