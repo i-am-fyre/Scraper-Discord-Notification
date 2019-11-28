@@ -7,6 +7,10 @@ All notifications will be sent to your desired Discord channel via webhook.
 
 <h2>Installation</h2>
 
+Make sure that your machine is up to date.
+>$ sudo apt update
+>$ sudo apt upgrade
+
 Use git to pull the repository files to your machine in the /github/ directory:
 >$ sudo git clone https://github.com/Fyre-Homelab/Scraper-Discord-Notification.git /github/
 
@@ -42,6 +46,9 @@ Check out: https://support.discordapp.com/hc/en-us/articles/228383668-Intro-to-W
 - url: https://www.kijiji.ca/b-free-stuff/manitoba/c17220001l9006
 - url: https://www.kijiji.ca/b-cars-vehicles/manitoba/tesla/k0c27l9006
 ```
+To get a search URL, go to http://www.kijiji.ca and use the search box for the item you're looking for.
+
+Use any of the filters on the left hand side of the page to narrow down your search as closely as you want (e.g. regions, price, etc.).
 
 **terms to exclude from scraping:** include a list of terms that you want to exclude from being posted to Discord. Follows YAML spacing.
 ```YAML
