@@ -15,6 +15,7 @@ class KijijiScraper():
         self.filepath = Path().absolute().joinpath(filename)
         self.all_ads = {}
         self.new_ads = {}
+        self.id = {}
 
         self.third_party_ads = []
         self.exclude_list = []
@@ -36,7 +37,7 @@ class KijijiScraper():
     # Save ads to file
     def save_ads(self):
         with self.filepath.open(mode="w") as ads_file:
-            json.dump(self.all_ads, ads_file)
+            json.dump(self.id, ads_file)
 
     # Set exclude list
     def set_exclude_list(self, exclude_words):
@@ -90,6 +91,7 @@ class KijijiScraper():
 
                     self.new_ads[kijiji_ad.id] = kijiji_ad.info
                     self.all_ads[kijiji_ad.id] = kijiji_ad.info
+                    self.id[kijiji_ad.id] = kijiji_ad.id
 
     def get_discord_title(self, soup):
         discord_title_location = soup.find('div', {'class': 'message'})
