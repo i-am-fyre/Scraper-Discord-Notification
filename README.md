@@ -4,6 +4,8 @@ A web scraper for Kijiji.ca based on your desired searches. You can also use exc
 All notifications will be sent to your desired Discord channel via webhook.
 *Tested on Ubuntu 18.04.03 LTS.*
 
+A lot of credit goes to @CRutkowski for his Kijiji-Scraper project (https://github.com/CRutkowski/Kijiji-Scraper) that served as the base for mine.
+
 ![Scraper - Notification - Embed](https://user-images.githubusercontent.com/58180427/69883816-73c8ed00-129b-11ea-9dd8-c02a9fbb76e2.png)
 
 
