@@ -32,6 +32,9 @@ class KijijiScraper():
             return
 
         with self.filepath.open(mode="r") as ads_file:
+            self.id = json.load(ads_file)
+
+        with self.filepath.open(mode="r") as ads_file:
             self.all_ads = json.load(ads_file)
 
     # Save ads to file
