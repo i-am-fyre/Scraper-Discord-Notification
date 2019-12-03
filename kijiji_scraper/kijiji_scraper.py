@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 import json
 from kijiji_scraper.kijiji_ad import KijijiAd
 from pathlib import Path
-
+import re
 
 class KijijiScraper():
     current_directory = os.path.dirname(os.path.realpath(__file__))
@@ -84,17 +84,26 @@ class KijijiScraper():
         for ad in kijiji_ads:
             kijiji_ad = KijijiAd(ad)
 
-            # If any of the title words match the exclude list then skip
-            if not [False for match in self.exclude_list
-                    if match in kijiji_ad.title.lower()]:
+            exclude_flag = 0
 
-                # Skip third-party ads and ads already found
+            # If any of the ad words match the exclude list then skip
+            for x in self.exclude_list:
+                result = re.search(x, str(kijiji_ad.info).lower())
+
+#                print("ID: " + kijiji_ad.id + ". Exclude phrase: " + x + ". Result: " + str(result)) #For debugging purposes:
+
+                if result is not None:
+#                    print(kijiji_ad.id + " is not added to the notification list.") #For debugging purposes:
+                    exclude_flag = -1
+                    break
+
+            if exclude_flag is not -1:
                 if (kijiji_ad.id not in self.all_ads and
                         kijiji_ad.id not in self.third_party_ads):
-
                     self.new_ads[kijiji_ad.id] = kijiji_ad.info
                     self.all_ads[kijiji_ad.id] = kijiji_ad.info
                     self.id[kijiji_ad.id] = kijiji_ad.id
+
 
     def get_discord_title(self, soup):
         discord_title_location = soup.find('div', {'class': 'message'})

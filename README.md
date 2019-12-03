@@ -62,14 +62,15 @@ Use any of the filters on the left hand side of the page to narrow down your sea
 
 ![Kijiji - URL](https://user-images.githubusercontent.com/58180427/69773238-e16c0080-1157-11ea-8105-797037bb5687.png)
 
-**terms to exclude from scraping:** include a list of terms that you want to exclude from being posted to Discord. Follows YAML spacing.
+**terms to exclude from scraping:** include a list of terms that you want to exclude from being posted to Discord. Follows YAML spacing. RegEx is supported. Use quotations.
 ```YAML
 - url: https://www.kijiji.ca/b-manitoba/lto/k0l9006
   exclude:
-    - LTO1
-    - LTO2
-    - LTO3
-    - LTO4
+    - "LTO1"
+    - "LTO2"
+    - "LTO3"
+    - "LTO4"
+    - "2[0-9][0-9]5"
 ```
 
 
