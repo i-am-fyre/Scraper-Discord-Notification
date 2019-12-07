@@ -69,7 +69,6 @@ Use any of the filters on the left hand side of the page to narrow down your sea
     - "LTO1"
     - "LTO2"
     - "LTO3"
-    - "LTO4"
     - "2[0-9][0-9]5"
 ```
 
