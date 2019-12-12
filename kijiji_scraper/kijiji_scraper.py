@@ -90,10 +90,7 @@ class KijijiScraper():
             for x in self.exclude_list:
                 result = re.search(x, str(kijiji_ad.info).lower())
 
-#                print("ID: " + kijiji_ad.id + ". Exclude phrase: " + x + ". Result: " + str(result)) #For debugging purposes:
-
                 if result is not None:
-#                    print(kijiji_ad.id + " is not added to the notification list.") #For debugging purposes:
                     exclude_flag = -1
                     break
 

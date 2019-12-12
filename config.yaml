@@ -1,10 +1,20 @@
+###########################################################################################################
+# Configuration File
+###########################################################################################################
 # Replace the values in the fields below with your own info so the scraper can send out a Discord message.
 
-# "webhook" is the webhook associated with a Discord bot for a particular channel.
-# "bot name" is the name of the bot that you wish to post the ads under (this does NOT need to match the name on the webhook, it will override it).
 
-webhook: << INSERT WEBHOOK HERE >>
-bot name: Kijiji
+# "WebhookURL" is the webhook associated with a particular channel.
+WebhookURL: << INSERT WEBHOOK HERE >>
+
+# "WebhookName" is the name of the webhook that you wish to post the ads under (this does NOT need to match the name on the webhook, it will override it).
+WebhookName: "[DEV] Fyre-Scraper"
+
+# Receive notifications on Discord when a new version/update is available.
+UpdateNotification: true
+
+# The number of searches between checking for a new version/update.
+UpdateCount: 12
 
 ---
 
@@ -17,17 +27,9 @@ bot name: Kijiji
 # You can add as many URLs as you wish to scrape.
 
 # Just a URL to scrape
+- url: https://www.kijiji.ca/b-free-stuff/manitoba/c17220001l9006
 - url: https://www.kijiji.ca/b-manitoba/dell-poweredge/k0l9006
   exclude:
-    - e3
-    - e5
-- url: https://www.kijiji.ca/b-manitoba/xeon/k0l9006
-- url: https://www.kijiji.ca/b-manitoba/server-rack/k0l9006
-- url: https://www.kijiji.ca/b-manitoba/server-cabinet/k0l9006
-- url: https://www.kijiji.ca/b-manitoba/lto/k0l9006
-  exclude:
-    - LTO1
-    - LTO2
-    - LTO3
-    - LTO4
-- url: https://www.kijiji.ca/b-manitoba/apc-ups/k0l9006
+    - "2950"
+    - "[1-2][8-9][0-9]0"
+    - "[E-F]C[M-P]"
