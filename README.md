@@ -20,10 +20,13 @@ Use git to pull the repository files to your machine in the /github/ directory:
 >$ sudo git clone --single-branch --branch dev-update_notification https://github.com/Fyre-Homelab/Scraper-Discord-Notification.git /github/Fyre-Scraper-Dev
 
 Install some required packages:
->$ sudo apt install python3-pip python3-bs4
+>$ sudo apt install -y python3.8 python3-pip
+
+>$ sudo -H python3.8 -m pip install -U pip
 
 Install some required packages for python:
->$ sudo -H pip3 install -r /github/Fyre-Scraper-Dev/requirements.txt
+>$ sudo -H python3.8 -m pip install -r /github/Fyre-Scraper-Dev/requirements.txt
+
 
 
 <h2>Setup</h2>
@@ -87,10 +90,8 @@ Then after you've set up a re-occurring check via crontab below, it will only se
 
 <h3>How to setup as a re-occurring check</h3>
 
->$ crontab -e
+>$ sudo crontab -e
 ```bash
 */15 * * * * /github/Fyre-Scraper-Dev/main.py
 ```
 This sets it up to scrape every 15 minutes for example.
-
-*NOTE: do not use 'sudo crontab -e' as it will not run properly!*

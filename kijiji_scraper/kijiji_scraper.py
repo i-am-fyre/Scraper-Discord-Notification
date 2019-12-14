@@ -94,7 +94,7 @@ class KijijiScraper():
                     exclude_flag = -1
                     break
 
-            if exclude_flag is not -1:
+            if exclude_flag != -1:
                 if (kijiji_ad.id not in self.all_ads and
                         kijiji_ad.id not in self.third_party_ads):
                     self.new_ads[kijiji_ad.id] = kijiji_ad.info
