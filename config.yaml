@@ -4,29 +4,34 @@
 # Replace the values in the fields below with your own info so the scraper can send out a Discord message.
 
 
-# "WebhookURL" is the webhook associated with a particular channel.
+# (Mandatory) WebhookURL is the webhook associated with a particular Discord channel.
 WebhookURL: << INSERT WEBHOOK HERE >>
 
-# "WebhookName" is the name of the webhook that you wish to post the ads under (this does NOT need to match the name on the webhook, it will override it).
+# (Optional) WebhookName is the name of the webhook that you wish to post the ads under (this does NOT need to match the name on the webhook, it will override it).
 WebhookName: "[DEV] Fyre-Scraper"
 
-# Receive notifications on Discord when a new version/update is available.
+# (Optional) Receive notifications on Discord when a new version/update is available.
 UpdateNotification: true
 
-# The number of searches between checking for a new version/update.
-UpdateCount: 12
+# (Optional) The number of searches between checking for a new version/update. If this is not uncommented, then the default is 10.
+UpdateCount: 5
 
 ---
 
 # Set the URLs you wish to scrape below with an optional list of words to exclude per URL.
 # Any filters you apply on the Kijij website are a part of the URL and will apply to the scraper.
 # "url" is as you would guess the URL you want to scrape.
-# "exclude" is a list of words, if an ad title contains any one of the words it will be ignored. Add as many words as you desire.
+# "exclude" is a list of words, if an ad contains any one of the words it will be ignored. Add as many words as you desire.
 
 # There are a couple examples below which you will want to remove/replace with your own.
-# You can add as many URLs as you wish to scrape.
+#- url: https://www.kijiji.ca/b-free-stuff/manitoba/c17220001l9006
+#- url: https://www.kijiji.ca/b-manitoba/dell-poweredge/k0l9006
+#  exclude:
+#    - "2950"
+#    - "[1-2][8-9][0-9]0"
+#    - "[E-F]C[M-P]"
 
-# Just a URL to scrape
+# You can add as many URLs as you wish to scrape.
 - url: https://www.kijiji.ca/b-free-stuff/manitoba/c17220001l9006
 - url: https://www.kijiji.ca/b-manitoba/dell-poweredge/k0l9006
   exclude:
