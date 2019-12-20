@@ -82,7 +82,7 @@ Use any of the filters on the left hand side of the page to narrow down your sea
 If it is your first time running the script, it may find ten to a few hundred search results, most of them will be older than you care to be bothered with.
 So we can run the script manually once in "silent mode" by appending `-s` in the same manner as the following command:
 
-> sudo python3 /github/Fyre-Scraper-Dev/main.py -s
+> sudo python3.8 /github/Fyre-Scraper-Dev/main.py -s
 
 This will populate a 'ads.json' file in the /github/Fyre-Scraper-Dev/ directory with all search results without sending you Discord notifications.
 Then after you've set up a re-occurring check via crontab below, it will only search for new entries.
